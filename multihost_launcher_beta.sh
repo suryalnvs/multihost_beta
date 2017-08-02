@@ -12,7 +12,7 @@ TLS=true
 function printHelp {
 
    echo "Usage: "
-   echo " ./multihost_test_launcher.sh [opt] [value] "
+   echo " ./multihost_launcher_beta.sh [opt] [value] "
    echo "    -z: number of zookeepers, default=1"
    echo "    -k: number of kafka, default=5"
    echo "    -o: number of orderers, default=4"
@@ -20,7 +20,7 @@ function printHelp {
    echo "    -c: channel name, default=myc0"
    echo " "
    echo " example: "
-   echo " ./multihost_test_launcher.sh -z 1 -k 5 -o 4 -r 2 -c myc0"
+   echo " ./multihost_launcher_beta.sh -z 1 -k 5 -o 4 -r 2 -c mychannel"
    exit
 }
 
@@ -29,7 +29,7 @@ nZookeeper=1
 nKafka=5
 nOrderer=4
 nOrgs=2
-channel="myc0"
+channel="mychannel"
 
 while getopts ":z:k:o:r:c:" opt; 
 do
